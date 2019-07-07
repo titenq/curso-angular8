@@ -2,7 +2,28 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <h2>Nome da Tabela: {{ nomeTabela }}</h2>
 </div>
+
+<ul>
+  <li *ngFor="let mes of meses">
+    {{ mes }}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let mes of meses; index as i">
+    {{ i + 1 }} - {{ mes }}
+  </li>
+</ul>
+
+<p>Lista de Funcionários do AppComponent</p>
+
+<ul>
+  <li *ngFor="let funcionario of funcionarios">
+    {{ funcionario }}
+  </li>
+</ul>
 
 <app-funcionarios></app-funcionarios>
 
