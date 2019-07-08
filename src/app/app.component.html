@@ -138,13 +138,23 @@
 
   <div class="form-row">
     <div class="col">
-      <input [(ngModel)]="funcionario" class="form-control" placeholder="Digite aqui o nome do funcionário.">
+      <input [(ngModel)]="funcModel" class="form-control" placeholder="Digite aqui o nome do funcionário.">
     </div>
     <div class="col">
+        <input class="form-control" placeholder="O funcionário aparecerá aqui!" readonly [value]="funcModel">
+      </div>
+    <div class="col">
         <button type="button" class="btn btn-primary"
-        (click)="gravarFuncionario()" >Gravar</button>
+        (click)="gravarFuncModel()" >Gravar</button>
     </div>
   </div>
+  <br><br><br>
+  <p>Lista de Funcionários do ngModel</p>
+  <ul>
+    <li *ngFor="let funcModel of funcsModel">
+      {{ funcModel }}
+    </li>
+  </ul>
   <br><br><br>
 </div>
 <router-outlet></router-outlet>

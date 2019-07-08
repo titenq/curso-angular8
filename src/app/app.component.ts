@@ -17,7 +17,8 @@ export class AppComponent {
   classeAlerta: string
   estiloAlerta: string
   textoDigitado: string = ''
-  funcionario: string = ''
+  funcModel: string = ''
+  funcsModel: string[] = []
 
   constructor(private funcionariosService: FuncionariosService) {
     this.funcionarios = this.funcionariosService.getFuncionarios()
@@ -39,8 +40,8 @@ export class AppComponent {
     this.textoDigitado = (event.target as HTMLInputElement).value
   }
 
-  gravarFuncionario() {
-    this.funcionarios.push(this.funcionario)
-    this.funcionario = ''
+  gravarFuncModel() {
+    this.funcsModel.push(this.funcModel)
+    this.funcModel = ''
   }
 }
