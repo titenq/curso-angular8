@@ -1,0 +1,29 @@
+.vermelho {
+  color: red;
+  margin-right: 40px;
+}
+
+.mais {
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.menos {
+  font-size: 38px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.numCoracao {
+  font-family: sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+}
+
+.clickCoracao {
+  cursor: pointer;
+}

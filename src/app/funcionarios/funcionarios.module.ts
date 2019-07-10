@@ -5,7 +5,10 @@ import { FuncionariosComponent } from './funcionarios.component';
 import { FuncionarioEscalaComponent } from './funcionario-escala/funcionario-escala.component';
 
 @NgModule({
-  declarations: [FuncionariosComponent, FuncionarioEscalaComponent],
+  declarations: [
+    FuncionariosComponent,
+    FuncionarioEscalaComponent
+  ],
   imports: [
     CommonModule
   ],
