@@ -1,15 +1,27 @@
+import { FuncionariosModule } from './funcionarios/funcionarios.module';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { SetorComponent } from './setor/setor.component';
+import { TabelaComponent } from './tabela/tabela.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ViewChildComponent } from './view-child/view-child.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        FuncionariosModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        SetorComponent,
+        TabelaComponent,
+        OutputPropertyComponent,
+        LifecycleComponent,
+        ViewChildComponent
       ],
     }).compileComponents();
   }));

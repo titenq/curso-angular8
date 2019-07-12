@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-output-property',
@@ -6,10 +6,9 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./output-property.component.css']
 })
 export class OutputPropertyComponent implements OnInit {
+  numClickCoracao: number = 0
 
   constructor() { }
-
-  numClickCoracao: number = 0
 
   @Output() clicaramNoCoracao: EventEmitter<any> = new EventEmitter()
 
