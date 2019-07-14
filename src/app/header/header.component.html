@@ -1,0 +1,40 @@
+<mat-toolbar class="menu-espacamento" color="primary">
+
+  <img src="/assets/img/angular.png" alt="Curso Angular 8" width="50" height="50">
+
+  <button mat-button routerLink="/">
+    <i class="material-icons">home</i>
+    <span>Home</span>
+  </button>
+
+  <button mat-button [matMenuTriggerFor]="itens">
+    <i class="material-icons">view_list</i>
+    <span>Itens</span>
+    <mat-menu #itens="matMenu">
+      <button mat-menu-item routerLink="/data-binding">Data Binding</button>
+      <button mat-menu-item>Property Binding</button>
+      <button mat-menu-item>Class Binding</button>
+      <button mat-menu-item routerLink="/service">Service</button>
+      <button mat-menu-item>Input Property</button>
+      <button mat-menu-item>Output Property</button>
+      <button mat-menu-item routerLink="/ngclass">ngClass</button>
+      <button mat-menu-item routerLink="/view-child">View Child</button>
+    </mat-menu>
+  </button>
+
+  <button mat-button [routerLink]="['/busca']">
+    <i class="material-icons">search</i>
+    <span>Busca</span>
+  </button>
+
+  <button mat-button [routerLink]="['/login']">
+    <i *ngIf="!logado" class="material-icons">how_to_reg</i>
+    <span *ngIf="!logado">Login</span>
+  </button>
+
+  <button mat-button [routerLink]="['/logout']">
+    <i *ngIf="logado" class="material-icons">account_circle</i>
+    <span *ngIf="logado">Logout</span>
+  </button>
+
+</mat-toolbar>

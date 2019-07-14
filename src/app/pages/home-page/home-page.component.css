@@ -1,0 +1,14 @@
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: #B52E31;
+  font-size: 5vw;
+}
+
+.img-angular {
+  width: 40vw;
+}

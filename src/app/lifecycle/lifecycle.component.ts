@@ -1,13 +1,13 @@
 import {
-  Component,
-  OnInit,
-  OnChanges,
-  DoCheck,
-  AfterContentInit,
   AfterContentChecked,
-  AfterViewInit,
+  AfterContentInit,
   AfterViewChecked,
-  OnDestroy
+  AfterViewInit,
+  Component,
+  DoCheck,
+  OnChanges,
+  OnDestroy,
+  OnInit
 } from '@angular/core';
 
 @Component({
