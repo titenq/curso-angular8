@@ -1,6 +1,7 @@
+/*todo Criar Menus
+Retirar propriedades de app.component.ts*/
+
 /*
-
-
 <h3>Property Binding</h3>
 <img src="{{ imgUrl }}" alt="Interpolation">
   &nbsp;

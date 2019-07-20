@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>ngStyle</h1>
+  <label>Digite a sua idade:</label>
+  <input type="number" [(ngModel)]="idade">
+  <h2 [ngStyle]="{
+  'display': idade == null ? 'none' : 'block',
+  'backgroundColor': idade < 18 ? '#ff0000' : '#00ff00',
+  'color': idade < 18 ? '#ffffff' : '#000000',
+  'fontWeight': idade < 18 ? 'bold' : 'normal',
+  'fontSize': idade < 18 ? '18px' : '14px'
+  }">
+    A sua idade é {{ idade }} anos.
+  </h2>
+</div>

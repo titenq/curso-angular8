@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Operador Elvis ?</h1>
+  <h4>Cliente:</h4>
+  <p>Nome: {{ cliente.nome }}</p>
+  <!--Sem o Operador Elvis ? em endereco que tem valor null, portanto não tem a propriedade logradouro, vai dar erro.-->
+  <p>Endereço: {{ cliente.endereco?.logradouro }}</p>
+</div>

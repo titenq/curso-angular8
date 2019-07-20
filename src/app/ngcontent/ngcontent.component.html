@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-card class="mt-3">
+    <mat-card-title>
+      <ng-content select="[titulo]"></ng-content>
+    </mat-card-title>
+    <mat-card-content>
+      <ng-content select=".conteudo"></ng-content>
+    </mat-card-content>
+    <mat-card-footer>
+      <ng-content select="[rodape]"></ng-content>
+    </mat-card-footer>
+  </mat-card>
+  <ng-content></ng-content>
+</div>

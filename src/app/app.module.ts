@@ -11,11 +11,27 @@ import { OutputPropertyComponent } from './output-property/output-property.compo
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ViewChildComponent } from './view-child/view-child.component';
 import { HeaderComponent } from './header/header.component';
-import { MatButtonModule, MatMenuModule, MatToolbarModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatMenuModule,
+  MatSlideToggleModule,
+  MatToolbarModule
+} from '@angular/material';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ServicePageComponent } from './pages/service-page/service-page.component';
 import { DataBindingPageComponent } from './pages/data-binding-page/data-binding-page.component';
 import { NgclassPageComponent } from './pages/ngclass-page/ngclass-page.component';
+import { NgstylePageComponent } from './pages/ngstyle-page/ngstyle-page.component';
+import { OperadorElvisPageComponent } from './pages/operador-elvis-page/operador-elvis-page.component';
+import { NgcontentPageComponent } from './pages/ngcontent-page/ngcontent-page.component';
+import { NgcontentComponent } from './ngcontent/ngcontent.component';
+import { FormatarErroDirective } from './shared/formatar-erro.directive';
+import { DirectivePageComponent } from './pages/directive-page/directive-page.component';
+import { HostListenerPageComponent } from './pages/host-listener-page/host-listener-page.component';
+import { MarcaTextoDirective } from './shared/marca-texto.directive';
+import { DirectiveInputPageComponent } from './pages/directive-input-page/directive-input-page.component';
+import { ModoNoturnoDirective } from './shared/modo-noturno.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +45,17 @@ import { NgclassPageComponent } from './pages/ngclass-page/ngclass-page.componen
     HomePageComponent,
     DataBindingPageComponent,
     ServicePageComponent,
-    NgclassPageComponent
+    NgclassPageComponent,
+    NgstylePageComponent,
+    OperadorElvisPageComponent,
+    NgcontentPageComponent,
+    NgcontentComponent,
+    FormatarErroDirective,
+    DirectivePageComponent,
+    HostListenerPageComponent,
+    MarcaTextoDirective,
+    DirectiveInputPageComponent,
+    ModoNoturnoDirective
   ],
   imports: [
     BrowserModule,
@@ -38,7 +64,9 @@ import { NgclassPageComponent } from './pages/ngclass-page/ngclass-page.componen
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

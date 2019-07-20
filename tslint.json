@@ -86,7 +86,8 @@
     "use-pipe-transform-interface": true,
     "semicolon": false,
     "no-trailing-whitespace": false,
-    "prefer-const": false
+    "prefer-const": false,
+    "no-unused-expression": false
   },
   "rulesDirectory": [
     "codelyzer"
