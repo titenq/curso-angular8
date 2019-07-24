@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ViewChildComponent } from './view-child/view-child.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { DataBindingPageComponent } from './pages/data-binding-page/data-binding-page.component';
@@ -11,6 +12,9 @@ import { NgcontentPageComponent } from './pages/ngcontent-page/ngcontent-page.co
 import { DirectivePageComponent } from './pages/directive-page/directive-page.component';
 import { HostListenerPageComponent } from './pages/host-listener-page/host-listener-page.component';
 import { DirectiveInputPageComponent } from './pages/directive-input-page/directive-input-page.component';
+import { DiretivaEstruturalPageComponent } from './pages/diretiva-estrutural-page/diretiva-estrutural-page.component';
+import { BroadcastPageComponent } from './pages/broadcast-page/broadcast-page.component';
+import { PipesPageComponent } from './pages/pipes-page/pipes-page.component'
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -24,7 +28,10 @@ const routes: Routes = [
   {path: 'operador-elvis', component: OperadorElvisPageComponent},
   {path: 'view-child', component: ViewChildComponent},
   {path: 'host-listener', component: HostListenerPageComponent},
-  {path: 'directive-input', component: DirectiveInputPageComponent}
+  {path: 'directive-input', component: DirectiveInputPageComponent},
+  {path: 'diretiva-estrutural', component: DiretivaEstruturalPageComponent},
+  {path: 'broadcast', component: BroadcastPageComponent},
+  {path: 'pipes', component: PipesPageComponent}
 ];
 
 @NgModule({

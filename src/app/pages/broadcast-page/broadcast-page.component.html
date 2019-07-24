@@ -1,0 +1,12 @@
+<div class="container text-center mt-4">
+  <h1>Broadcast Page Component</h1>
+
+  <ul>
+    <li *ngFor="let item of lista">{{ item }}</li>
+  </ul>
+
+  <input type="text" #adicionarItem [(ngModel)]="valorItem" [value]=valorItem>&nbsp;
+  <button (click)="addItens(adicionarItem.value)" class="btn btn-primary">Adicionar</button>
+
+  <app-broadcast></app-broadcast>
+</div>

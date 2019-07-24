@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <h1 class="text-center">Pipes</h1>
+
+  <h4 class="text-center">Dados do Funcionário</h4>
+  <p>Nome: {{ funcionario.nome | uppercase }}</p>
+  <p>CPF: {{ funcionario.cpf | cpf }}</p>
+  <p>Celular: {{ funcionario.celular | celular }}</p>
+  <p>Data de Nascimento: {{ funcionario.dataNascimento | date:'dd/MM/yyyy' }}</p>
+  <p>Idade: {{ idadeFuncionario }} anos</p>
+  <p>Altura: {{ funcionario.altura | number:'1.2-2' }} m</p>
+  <p>Peso: {{ funcionario.peso | number:'1.2-2' }} kg</p>
+  <p>Salário: {{ funcionario.salario | currency:'BRL' }}</p>
+</div>

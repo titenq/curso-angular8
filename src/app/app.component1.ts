@@ -1,5 +1,6 @@
 /*todo Criar Menus
-Retirar propriedades de app.component.ts*/
+Retirar propriedades de app.component.ts
+Criar ngIf ngFor ngSwitch*/
 
 /*
 <h3>Property Binding</h3>

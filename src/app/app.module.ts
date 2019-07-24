@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core'
+import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@angular/common'
+import localept from '@angular/common/locales/pt'
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -32,6 +34,15 @@ import { HostListenerPageComponent } from './pages/host-listener-page/host-liste
 import { MarcaTextoDirective } from './shared/marca-texto.directive';
 import { DirectiveInputPageComponent } from './pages/directive-input-page/directive-input-page.component';
 import { ModoNoturnoDirective } from './shared/modo-noturno.directive';
+import { DiretivaEstruturalDirective } from './shared/diretiva-estrutural.directive';
+import { DiretivaEstruturalPageComponent } from './pages/diretiva-estrutural-page/diretiva-estrutural-page.component';
+import { BroadcastPageComponent } from './pages/broadcast-page/broadcast-page.component';
+import { BroadcastComponent } from './broadcast/broadcast.component';
+import { PipesPageComponent } from './pages/pipes-page/pipes-page.component';
+import { CpfPipe } from './shared/cpf.pipe';
+import { CelularPipe } from './shared/celular.pipe';
+
+registerLocaleData(localept, 'pt')
 
 @NgModule({
   declarations: [
@@ -55,7 +66,14 @@ import { ModoNoturnoDirective } from './shared/modo-noturno.directive';
     HostListenerPageComponent,
     MarcaTextoDirective,
     DirectiveInputPageComponent,
-    ModoNoturnoDirective
+    ModoNoturnoDirective,
+    DiretivaEstruturalDirective,
+    DiretivaEstruturalPageComponent,
+    BroadcastPageComponent,
+    BroadcastComponent,
+    PipesPageComponent,
+    CpfPipe,
+    CelularPipe
   ],
   imports: [
     BrowserModule,
@@ -68,7 +86,7 @@ import { ModoNoturnoDirective } from './shared/modo-noturno.directive';
     MatCardModule,
     MatSlideToggleModule
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'pt'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

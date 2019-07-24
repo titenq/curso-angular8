@@ -1,0 +1,6 @@
+<div class="container text-center mt-4">
+  <h1>Diretiva Estrutural</h1>
+  <h3 *appDiretivaEstrutural="exibirDiv">Esse texto só será exibido se a condição for verdadeira.</h3>
+  <h3 *appDiretivaEstrutural="!exibirDiv">Esse texto só será exibido se a condição for falsa.</h3>
+  <button (click)="OnExibirDiv()" class="btn btn-primary">Exibir</button>
+</div>
