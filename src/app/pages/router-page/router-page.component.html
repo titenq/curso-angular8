@@ -1,0 +1,15 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <ul>
+        <li *ngFor="let funcionario of funcionarios">
+          {{ funcionario.id }} - {{ funcionario.nome }} - {{ funcionario.email }} - <a
+          [routerLink]="[funcionario.id]">editar</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+</div>

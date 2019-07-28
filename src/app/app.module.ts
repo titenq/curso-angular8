@@ -4,15 +4,6 @@ import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@ang
 import localept from '@angular/common/locales/pt'
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { SetorComponent } from './setor/setor.component';
-import { TabelaComponent } from './tabela/tabela.component';
-import { OutputPropertyComponent } from './output-property/output-property.component';
-import { LifecycleComponent } from './lifecycle/lifecycle.component';
-import { ViewChildComponent } from './view-child/view-child.component';
-import { HeaderComponent } from './header/header.component';
 import {
   MatButtonModule,
   MatCardModule,
@@ -20,6 +11,15 @@ import {
   MatSlideToggleModule,
   MatToolbarModule
 } from '@angular/material';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { SetorComponent } from './components/setor/setor.component';
+import { TabelaComponent } from './components/tabela/tabela.component';
+import { OutputPropertyComponent } from './components/output-property/output-property.component';
+import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
+import { ViewChildComponent } from './components/view-child/view-child.component';
+import { HeaderComponent } from './components/header/header.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ServicePageComponent } from './pages/service-page/service-page.component';
 import { DataBindingPageComponent } from './pages/data-binding-page/data-binding-page.component';
@@ -27,7 +27,7 @@ import { NgclassPageComponent } from './pages/ngclass-page/ngclass-page.componen
 import { NgstylePageComponent } from './pages/ngstyle-page/ngstyle-page.component';
 import { OperadorElvisPageComponent } from './pages/operador-elvis-page/operador-elvis-page.component';
 import { NgcontentPageComponent } from './pages/ngcontent-page/ngcontent-page.component';
-import { NgcontentComponent } from './ngcontent/ngcontent.component';
+import { NgcontentComponent } from './components/ngcontent/ngcontent.component';
 import { FormatarErroDirective } from './shared/formatar-erro.directive';
 import { DirectivePageComponent } from './pages/directive-page/directive-page.component';
 import { HostListenerPageComponent } from './pages/host-listener-page/host-listener-page.component';
@@ -37,10 +37,13 @@ import { ModoNoturnoDirective } from './shared/modo-noturno.directive';
 import { DiretivaEstruturalDirective } from './shared/diretiva-estrutural.directive';
 import { DiretivaEstruturalPageComponent } from './pages/diretiva-estrutural-page/diretiva-estrutural-page.component';
 import { BroadcastPageComponent } from './pages/broadcast-page/broadcast-page.component';
-import { BroadcastComponent } from './broadcast/broadcast.component';
+import { BroadcastComponent } from './components/broadcast/broadcast.component';
 import { PipesPageComponent } from './pages/pipes-page/pipes-page.component';
 import { CpfPipe } from './shared/cpf.pipe';
 import { CelularPipe } from './shared/celular.pipe';
+import { RouterPageComponent } from './pages/router-page/router-page.component';
+import { PageNotFoundPageComponent } from './pages/page-not-found-page/page-not-found-page.component';
+import { RouterComIdComponent } from './components/router-com-id/router-com-id.component';
 
 registerLocaleData(localept, 'pt')
 
@@ -73,7 +76,10 @@ registerLocaleData(localept, 'pt')
     BroadcastComponent,
     PipesPageComponent,
     CpfPipe,
-    CelularPipe
+    CelularPipe,
+    RouterPageComponent,
+    PageNotFoundPageComponent,
+    RouterComIdComponent
   ],
   imports: [
     BrowserModule,

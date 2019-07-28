@@ -1,12 +1,12 @@
-import { FuncionariosModule } from './funcionarios/funcionarios.module';
+import { FuncionariosModule } from './components/funcionarios/funcionarios.module';
 import { async, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { SetorComponent } from './setor/setor.component';
-import { TabelaComponent } from './tabela/tabela.component';
-import { OutputPropertyComponent } from './output-property/output-property.component';
-import { LifecycleComponent } from './lifecycle/lifecycle.component';
-import { ViewChildComponent } from './view-child/view-child.component';
+import { SetorComponent } from './components/setor/setor.component';
+import { TabelaComponent } from './components/tabela/tabela.component';
+import { OutputPropertyComponent } from './components/output-property/output-property.component';
+import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
+import { ViewChildComponent } from './components/view-child/view-child.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

@@ -1,8 +1,10 @@
 <mat-toolbar class="menu-espacamento" color="primary">
 
-  <img src="/assets/img/angular.png" alt="Curso Angular 8" width="50" height="50">
+  <img src="/assets/img/angular.png" class="animated delay-2s rubberBand" alt="Curso Angular 8"
+       width="50"
+       height="50">
 
-  <button mat-button routerLink="/">
+  <button mat-button routerLink="/" routerLinkActive="active">
     <i class="material-icons">home</i>
     <span>Home</span>
   </button>
@@ -28,20 +30,21 @@
       <button mat-menu-item routerLink="/diretiva-estrutural">Diretiva Estrutural</button>
       <button mat-menu-item routerLink="/broadcast">Broadcast</button>
       <button mat-menu-item routerLink="/pipes">Pipes</button>
+      <button mat-menu-item routerLink="/router">Router</button>
     </mat-menu>
   </button>
 
-  <button mat-button [routerLink]="['/busca']">
+  <button mat-button routerLink="/busca">
     <i class="material-icons">search</i>
     <span>Busca</span>
   </button>
 
-  <button mat-button [routerLink]="['/login']">
+  <button mat-button routerLink="/login">
     <i *ngIf="!logado" class="material-icons">how_to_reg</i>
     <span *ngIf="!logado">Login</span>
   </button>
 
-  <button mat-button [routerLink]="['/logout']">
+  <button mat-button routerLink="/logout">
     <i *ngIf="logado" class="material-icons">account_circle</i>
     <span *ngIf="logado">Logout</span>
   </button>
