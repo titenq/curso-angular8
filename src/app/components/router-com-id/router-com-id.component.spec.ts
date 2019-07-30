@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { RouterComIdComponent } from './router-com-id.component';
+import { RouterComIdComponent } from './router-com-id.component'
 
 describe('RouterComIdComponent', () => {
   let component: RouterComIdComponent;

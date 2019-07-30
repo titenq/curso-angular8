@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { SetorComponent } from './setor.component';
+import { SetorComponent } from './setor.component'
 
 describe('SetorComponent', () => {
   let component: SetorComponent;

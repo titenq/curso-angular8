@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
-import { FuncionariosService } from './funcionarios.service';
+import { FuncionariosService } from './funcionarios.service'
 
 @Component({
   selector: 'app-service-page',

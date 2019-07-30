@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { OperadorElvisPageComponent } from './operador-elvis-page.component';
+import { OperadorElvisPageComponent } from './operador-elvis-page.component'
 
 describe('OperadorElvisPageComponent', () => {
   let component: OperadorElvisPageComponent;

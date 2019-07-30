@@ -1,15 +1,29 @@
 <div class="container mt-3">
   <div class="row">
-    <div class="col">
-      <ul>
-        <li *ngFor="let funcionario of funcionarios">
-          {{ funcionario.id }} - {{ funcionario.nome }} - {{ funcionario.email }} - <a
-          [routerLink]="[funcionario.id]">editar</a>
-        </li>
-      </ul>
-    </div>
-    <div class="col">
-
-    </div>
+    <h5>Lista de Funcionários</h5>
+    <ul>
+      <li *ngFor="let funcionario of funcionarios">
+        {{ funcionario.id }} - {{ funcionario.nome }} - {{ funcionario.email }} - <a
+        [routerLink]="['/router', funcionario.id]">editar</a>
+      </li>
+    </ul>
   </div>
+  <h5>Lista de Alunos</h5>
+  <ul>
+    <li *ngFor="let aluno of alunos">
+      {{ aluno.id }} - {{ aluno.nome }} - {{ aluno.turma }} - {{ aluno.nota | number:'1.1-1' }}
+      <a
+      [routerLink]="['/router/aluno', aluno.id]">editar
+      </a>
+    </li>
+  </ul>
+  <h5>Query Parameters</h5>
+  <ul>
+    <li *ngFor="let aluno of alunos">
+      {{ aluno.id }} - {{ aluno.nome }} - {{ aluno.turma }} - {{ aluno.nota | number:'1.1-1' }}
+      <a
+        [routerLink]="['/router/aluno', aluno.id]" [queryParams]="{page: 1}">editar
+      </a>
+    </li>
+  </ul>
 </div>

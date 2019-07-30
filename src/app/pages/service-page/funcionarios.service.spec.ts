@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing'
 
-import { FuncionariosService } from './funcionarios.service';
+import { FuncionariosService } from './funcionarios.service'
 
 describe('FuncionariosService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

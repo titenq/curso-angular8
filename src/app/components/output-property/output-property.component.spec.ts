@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { OutputPropertyComponent } from './output-property.component';
+import { OutputPropertyComponent } from './output-property.component'
 
 describe('OutputPropertyComponent', () => {
   let component: OutputPropertyComponent;

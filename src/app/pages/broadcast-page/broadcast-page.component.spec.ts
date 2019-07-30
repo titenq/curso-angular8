@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { BroadcastPageComponent } from './broadcast-page.component';
+import { BroadcastPageComponent } from './broadcast-page.component'
 
 describe('BroadcastPageComponent', () => {
   let component: BroadcastPageComponent;

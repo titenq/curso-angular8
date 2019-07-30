@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { BroadcastComponent } from './broadcast.component';
+import { BroadcastComponent } from './broadcast.component'
 
 describe('BroadcastComponent', () => {
   let component: BroadcastComponent;

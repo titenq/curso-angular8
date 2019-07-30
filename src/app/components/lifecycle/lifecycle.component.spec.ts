@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { LifecycleComponent } from './lifecycle.component';
+import { LifecycleComponent } from './lifecycle.component'
 
 describe('LifecycleComponent', () => {
   let component: LifecycleComponent;

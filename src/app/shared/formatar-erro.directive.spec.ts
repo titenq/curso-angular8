@@ -1,4 +1,4 @@
-import { FormatarErroDirective } from './formatar-erro.directive';
+import { FormatarErroDirective } from './formatar-erro.directive'
 
 describe('FormatarErroDirective', () => {
   it('should create an instance', () => {

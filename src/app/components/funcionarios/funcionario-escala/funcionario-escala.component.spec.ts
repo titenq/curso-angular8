@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { FuncionarioEscalaComponent } from './funcionario-escala.component';
+import { FuncionarioEscalaComponent } from './funcionario-escala.component'
 
 describe('FuncionarioEscalaComponent', () => {
   let component: FuncionarioEscalaComponent;

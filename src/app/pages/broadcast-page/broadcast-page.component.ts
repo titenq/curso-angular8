@@ -1,6 +1,6 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 
-import { AppService } from '../../app.service';
+import { AppService } from '../../app.service'
 
 @Component({
   selector: 'app-broadcast-page',

@@ -1,0 +1,13 @@
+<div class="container mt-3">
+  <p>Funcionário:</p>
+  <p>Id: {{ aluno?.id }}</p>
+  <p>Nome: {{ aluno?.nome }}</p>
+  <p>Turma: {{ aluno?.turma }}</p>
+  <p>Nota: {{ aluno?.nota }}</p>
+
+  <div class="row">
+    <button class="btn btn-primary mr-2" (click)="prevPage()"><i class="fas fa-angle-double-left"></i></button>
+    <h6>Página: {{ page }}</h6>
+    <button class="btn btn-primary ml-2" (click)="nextPage()"><i class="fas fa-angle-double-right"></i></button>
+  </div>
+</div>

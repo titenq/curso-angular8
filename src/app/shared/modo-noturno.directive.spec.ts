@@ -1,4 +1,4 @@
-import { ModoNoturnoDirective } from './modo-noturno.directive';
+import { ModoNoturnoDirective } from './modo-noturno.directive'
 
 describe('ModoNoturnoDirective', () => {
   it('should create an instance', () => {

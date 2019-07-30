@@ -87,7 +87,8 @@
     "semicolon": false,
     "no-trailing-whitespace": false,
     "prefer-const": false,
-    "no-unused-expression": false
+    "no-unused-expression": false,
+    "variable-name": false
   },
   "rulesDirectory": [
     "codelyzer"

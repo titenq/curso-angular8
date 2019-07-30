@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { PipesPageComponent } from './pipes-page.component';
+import { PipesPageComponent } from './pipes-page.component'
 
 describe('PipesPageComponent', () => {
   let component: PipesPageComponent;

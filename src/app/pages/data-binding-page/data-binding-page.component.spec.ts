@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { DataBindingPageComponent } from './data-binding-page.component';
+import { DataBindingPageComponent } from './data-binding-page.component'
 
 describe('DataBindingComponent', () => {
   let component: DataBindingPageComponent;

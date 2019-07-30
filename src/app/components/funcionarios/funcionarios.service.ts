@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +35,6 @@ export class FuncionariosService {
   }
 
   getFuncionarioPorId(id: number) {
-    let idFuncionario = id
-    return this.getFuncionariosComId().find(x => x.id === idFuncionario)
+    return this.getFuncionariosComId().find(x => x.id === id)
   }
 }

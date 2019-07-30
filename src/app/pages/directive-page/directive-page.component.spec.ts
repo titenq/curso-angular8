@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { DirectivePageComponent } from './directive-page.component';
+import { DirectivePageComponent } from './directive-page.component'
 
 describe('DirectivePageComponent', () => {
   let component: DirectivePageComponent;

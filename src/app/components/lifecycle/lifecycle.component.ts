@@ -8,7 +8,7 @@ import {
   OnChanges,
   OnDestroy,
   OnInit
-} from '@angular/core';
+} from '@angular/core'
 
 @Component({
   selector: 'app-lifecycle',

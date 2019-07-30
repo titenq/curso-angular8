@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { NgstylePageComponent } from './ngstyle-page.component';
+import { NgstylePageComponent } from './ngstyle-page.component'
 
 describe('NgstylePageComponent', () => {
   let component: NgstylePageComponent;

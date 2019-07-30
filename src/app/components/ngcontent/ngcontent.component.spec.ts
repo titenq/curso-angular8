@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { NgcontentComponent } from './ngcontent.component';
+import { NgcontentComponent } from './ngcontent.component'
 
 describe('NgcontentComponent', () => {
   let component: NgcontentComponent;

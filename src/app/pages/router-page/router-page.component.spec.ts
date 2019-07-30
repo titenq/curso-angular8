@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { RouterPageComponent } from './router-page.component';
+import { RouterPageComponent } from './router-page.component'
 
 describe('RouterPageComponent', () => {
   let component: RouterPageComponent;
