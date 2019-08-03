@@ -1,2 +1,54 @@
-<p>alunos works!</p>
-<router-outlet></router-outlet>
+<div class="row">
+  <div class="col">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let aluno">
+          <a [routerLink]="[aluno.id]">{{aluno.id}}</a>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let aluno"> {{aluno.nome}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="turma">
+        <th mat-header-cell *matHeaderCellDef> Turma </th>
+        <td mat-cell *matCellDef="let aluno"> {{aluno.turma}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nota">
+        <th mat-header-cell *matHeaderCellDef> Nota </th>
+        <td mat-cell *matCellDef="let aluno"> {{aluno.nota | number:'1.1-1'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="editar">
+        <th mat-header-cell *matHeaderCellDef> Editar </th>
+        <td mat-cell *matCellDef="let aluno">
+          <a [routerLink]="[aluno.id] + '/edit'" class="btn-sm btn-primary">Editar</a>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="deletar">
+        <th mat-header-cell *matHeaderCellDef> Deletar </th>
+        <td mat-cell *matCellDef="let aluno">
+          <a [routerLink]="[aluno.id] + '/delete'" class="btn-sm btn-primary">Deletar</a>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div class="row">
+  <a routerLink="add" class="btn btn-primary">Adicionar</a>
+</div>

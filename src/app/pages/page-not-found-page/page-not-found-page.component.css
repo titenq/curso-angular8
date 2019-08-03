@@ -1,4 +1,6 @@
 figure img {
+  position: relative;
+  bottom: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;

@@ -1,45 +1,45 @@
 export class Aluno {
-  private _id: number
-  private _nome: string
-  private _turma: string
-  private _nota: number
+  private id: number
+  private nome: string
+  private turma: string
+  private nota: number
 
   constructor(id: number, nome: string, turma: string, nota: number) {
-    this._id = id
-    this._nome = nome
-    this._turma = turma
-    this._nota = nota
+    this.id = id
+    this.nome = nome
+    this.turma = turma
+    this.nota = nota
   }
 
-  get id(): number {
-    return this._id
+  get getId(): number {
+    return this.id
   }
 
-  set id(value: number) {
-    this._id = value
+  set setId(id: number) {
+    this.id = id
   }
 
-  get nome(): string {
-    return this._nome
+  get getNome(): string {
+    return this.nome
   }
 
-  set nome(value: string) {
-    this._nome = value
+  set setNome(nome: string) {
+    this.nome = nome
   }
 
-  get turma(): string {
-    return this._turma
+  get getTurma(): string {
+    return this.turma
   }
 
-  set turma(value: string) {
-    this._turma = value
+  set setTurma(turma: string) {
+    this.turma = turma
   }
 
-  get nota(): number {
-    return this._nota
+  get getNota(): number {
+    return this.nota
   }
 
-  set nota(value: number) {
-    this._nota = value
+  set setNota(nota: number) {
+    this.nota = nota
   }
 }

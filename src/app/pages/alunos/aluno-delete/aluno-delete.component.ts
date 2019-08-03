@@ -5,18 +5,15 @@ import { ActivatedRoute, Router } from '@angular/router'
 import { AlunosService } from '../alunos.service'
 
 @Component({
-  selector: 'app-aluno-form',
-  templateUrl: './aluno-form.component.html',
-  styleUrls: ['./aluno-form.component.css']
+  selector: 'app-aluno-delete',
+  templateUrl: './aluno-delete.component.html',
+  styleUrls: ['./aluno-delete.component.css']
 })
-export class AlunoFormComponent implements OnInit, OnDestroy {
+export class AlunoDeleteComponent implements OnInit, OnDestroy {
 
   aluno: Aluno
   subscriptionAluno: Subscription
   id: string
-  nome: string
-  turma: string
-  nota: number
 
   constructor(private activatedRoute: ActivatedRoute,
               private router: Router,
@@ -31,7 +28,7 @@ export class AlunoFormComponent implements OnInit, OnDestroy {
     })
 
     if (this.aluno === undefined) {
-      this.aluno = new Aluno(null, '', '', null)
+      this.router.navigate(['**'])
     }
   }
 
@@ -39,12 +36,4 @@ export class AlunoFormComponent implements OnInit, OnDestroy {
     this.subscriptionAluno.unsubscribe()
   }
 
-  editAluno() {
-
-  }
-
-  addAluno() {
-    let id = this.alunosService.getLastId()
-    this.alunosService.addAluno(new Aluno(id, this.nome, this.turma, this.nota))
-  }
 }

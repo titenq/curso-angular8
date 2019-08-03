@@ -40,12 +40,12 @@
     <span>Busca</span>
   </button>
 
-  <button mat-button routerLink="/login">
+  <button mat-button routerLink="/login" routerLinkActive="active">
     <i *ngIf="!logado" class="material-icons">how_to_reg</i>
     <span *ngIf="!logado">Login</span>
   </button>
 
-  <button mat-button routerLink="/logout">
+  <button mat-button (click)="logout()">
     <i *ngIf="logado" class="material-icons">account_circle</i>
     <span *ngIf="logado">Logout</span>
   </button>

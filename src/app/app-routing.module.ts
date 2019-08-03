@@ -23,6 +23,8 @@ import { RouterAlunoComponent } from './components/router-aluno/router-aluno.com
 const routes: Routes = [
   {path: 'alunos',
     loadChildren: () => import('./pages/alunos/alunos.module').then(mod => mod.AlunosModule)},
+  {path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then(mod => mod.LoginModule)},
   {path: 'home', component: HomePageComponent},
   {path: 'data-binding', component: DataBindingPageComponent},
   {path: 'service', component: ServicePageComponent},

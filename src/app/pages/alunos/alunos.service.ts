@@ -1,27 +1,36 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core'
 
 import { Aluno } from './aluno'
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AlunosService {
 
-  alunos: Aluno[]
+  private alunos: Aluno[] = [
+    new Aluno(1, 'Roberto', '1101', 8.5),
+    new Aluno(2, 'Mariana', '1201', 6),
+    new Aluno(3, 'Marcela', '1102', 10)
+  ]
 
-  constructor() {
-    this.alunos = [
-      new Aluno(1, 'Roberto', '1101', 8.5),
-      new Aluno(2, 'Mariana', '1201', 6.0),
-      new Aluno(3, 'Marcela', '1102', 7.5)
-    ]
-  }
+  emitAluno = new EventEmitter<Aluno>()
+
+  constructor() { }
 
   addAluno(aluno: Aluno): void {
     this.alunos.push(aluno)
+    this.emitAluno.emit(aluno)
   }
 
   getAlunos(): Aluno[] {
     return this.alunos
   }
+
+  getAluno(id: number): Aluno {
+    return this.getAlunos().find(aluno => aluno.getId == id)
+  }
+
+  getLastId(): number {
+    let alunos = this.getAlunos()
+    return alunos[alunos.length - 1].getId + 1
+  }
+
 }

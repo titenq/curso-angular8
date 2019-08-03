@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Login</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input [(ngModel)]="user.email" name="email" matInput type="email" placeholder="e-mail">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input [(ngModel)]="user.password" name="password" matInput type="password" placeholder="Senha">
+  </mat-form-field>
+  <button type="button" mat-raised-button color="primary" (click)="logar()">Logar</button>
+</form>
