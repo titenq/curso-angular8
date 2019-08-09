@@ -10,7 +10,7 @@ import { AuthService } from '../../../auth.service'
 })
 export class LoginComponent implements OnInit {
 
-  private user: User = new User()
+  user: User = new User()
 
   constructor(private authService: AuthService) { }
 

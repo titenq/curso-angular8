@@ -20,7 +20,9 @@ export class AuthService {
       this.userAuth = true
       this.userAuthEmitter.emit(true)
       this.router.navigate([this.redirectUrl])
+
     } else {
+
       this.userAuth = false
       this.userAuthEmitter.emit(false)
       this.router.navigate(['/login'])
