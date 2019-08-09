@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, EventEmitter, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
 
 import { AuthService } from '../../auth.service'
@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.logado = false
+    this.authService.userAuth = false
     this.router.navigate(['/'])
   }
 }

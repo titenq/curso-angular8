@@ -44,7 +44,8 @@ import { CelularPipe } from './shared/celular.pipe'
 import { RouterPageComponent } from './pages/router-page/router-page.component'
 import { PageNotFoundPageComponent } from './pages/page-not-found-page/page-not-found-page.component'
 import { RouterComIdComponent } from './components/router-com-id/router-com-id.component'
-import { RouterAlunoComponent } from './components/router-aluno/router-aluno.component'
+import { RouterAlunoComponent } from './components/router-aluno/router-aluno.component';
+import { GuardComponent } from './pages/guard/guard.component'
 
 registerLocaleData(localept, 'pt')
 
@@ -81,7 +82,8 @@ registerLocaleData(localept, 'pt')
     RouterPageComponent,
     PageNotFoundPageComponent,
     RouterComIdComponent,
-    RouterAlunoComponent
+    RouterAlunoComponent,
+    GuardComponent
   ],
   imports: [
     BrowserModule,

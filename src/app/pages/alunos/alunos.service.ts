@@ -25,12 +25,12 @@ export class AlunosService {
   }
 
   getAluno(id: number): Aluno {
-    return this.getAlunos().find(aluno => aluno.getId == id)
+    return this.getAlunos().find(aluno => aluno.id == id)
   }
 
   getLastId(): number {
     let alunos = this.getAlunos()
-    return alunos[alunos.length - 1].getId + 1
+    return alunos[alunos.length - 1].id + 1
   }
 
 }

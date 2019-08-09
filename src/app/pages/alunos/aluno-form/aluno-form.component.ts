@@ -1,15 +1,16 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
 import { Aluno } from '../aluno'
-import { Subscription } from 'rxjs'
+import { Observable, Subscription } from 'rxjs'
 import { ActivatedRoute, Router } from '@angular/router'
 import { AlunosService } from '../alunos.service'
+import { FormDeactivate } from '../../../guards/form-deactivate'
 
 @Component({
   selector: 'app-aluno-form',
   templateUrl: './aluno-form.component.html',
   styleUrls: ['./aluno-form.component.css']
 })
-export class AlunoFormComponent implements OnInit, OnDestroy {
+export class AlunoFormComponent implements OnInit, OnDestroy, FormDeactivate {
 
   aluno: Aluno
   subscriptionAluno: Subscription
@@ -17,6 +18,7 @@ export class AlunoFormComponent implements OnInit, OnDestroy {
   nome: string
   turma: string
   nota: number
+  changeForm: boolean = false
 
   constructor(private activatedRoute: ActivatedRoute,
               private router: Router,
@@ -24,7 +26,7 @@ export class AlunoFormComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    this.subscriptionAluno = this.activatedRoute.params.subscribe((params: any) => {
+    /*this.subscriptionAluno = this.activatedRoute.params.subscribe((params: any) => {
       let id = params[`id`]
       this.aluno = this.alunosService.getAluno(parseInt(id, 10))
       this.id = id
@@ -32,7 +34,12 @@ export class AlunoFormComponent implements OnInit, OnDestroy {
 
     if (this.aluno === undefined) {
       this.aluno = new Aluno(null, '', '', null)
-    }
+    }*/
+
+    this.subscriptionAluno = this.activatedRoute.data.subscribe(
+      (data: { aluno: Aluno }) => {
+      this.aluno = data.aluno
+    })
   }
 
   ngOnDestroy(): void {
@@ -47,4 +54,22 @@ export class AlunoFormComponent implements OnInit, OnDestroy {
     let id = this.alunosService.getLastId()
     this.alunosService.addAluno(new Aluno(id, this.nome, this.turma, this.nota))
   }
+
+  onInput() {
+    this.changeForm = true
+  }
+
+  changeRoute(): boolean {
+    if (this.changeForm) {
+      confirm('Tem certeza que deseja sair dessa página?' + '\r' +
+        'Os dados digitados no formulário serão perdidos.')
+    }
+
+    return true
+  }
+
+  canDeactivate() {
+    return this.changeRoute()
+  }
+
 }

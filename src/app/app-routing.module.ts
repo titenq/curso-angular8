@@ -19,6 +19,8 @@ import { RouterPageComponent } from './pages/router-page/router-page.component'
 import { PageNotFoundPageComponent } from './pages/page-not-found-page/page-not-found-page.component'
 import { RouterComIdComponent } from './components/router-com-id/router-com-id.component'
 import { RouterAlunoComponent } from './components/router-aluno/router-aluno.component'
+import { GuardComponent } from './pages/guard/guard.component'
+import { AuthGuard } from './guards/auth.guard'
 
 const routes: Routes = [
   {path: 'alunos',
@@ -39,9 +41,10 @@ const routes: Routes = [
   {path: 'diretiva-estrutural', component: DiretivaEstruturalPageComponent},
   {path: 'broadcast', component: BroadcastPageComponent},
   {path: 'pipes', component: PipesPageComponent},
-  {path: 'router', component: RouterPageComponent},
+  {path: 'router', component: RouterPageComponent, canActivate: [AuthGuard]},
   {path: 'router/:id', component: RouterComIdComponent},
   {path: 'router/aluno/:id', component: RouterAlunoComponent},
+  {path: 'guard', component: GuardComponent, canActivate: [AuthGuard]},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundPageComponent}
 ];

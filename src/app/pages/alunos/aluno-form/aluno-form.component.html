@@ -5,31 +5,33 @@
     <label class="col-sm-2 col-form-label">ID</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" placeholder="ID inserido automaticamente." readonly
-             [value]="[aluno?.getId]">
+             [value]="[aluno?.id]">
     </div>
   </div>
 
   <div class="form-group row">
     <label for="nome" class="col-sm-2 col-form-label">Nome</label>
     <div class="col-sm-10">
-      <input [(ngModel)]="nome" name="nome" type="text" class="form-control" id="nome" placeholder="Nome"
-             [value]="[aluno?.getNome]">
+      <input [(ngModel)]="aluno.nome" name="nome"
+             [value]="[aluno?.nome]"
+             (input)="onInput()"
+             type="text" class="form-control" id="nome" placeholder="Nome">
     </div>
   </div>
 
   <div class="form-group row">
     <label for="turma" class="col-sm-2 col-form-label">Turma</label>
     <div class="col-sm-10">
-      <input [(ngModel)]="turma" name="turma" type="text" class="form-control" id="turma" placeholder="Turma"
-             [value]="[aluno?.getTurma]">
+      <input [(ngModel)]="aluno.turma" name="turma" type="text" class="form-control" id="turma" placeholder="Turma"
+             [value]="[aluno?.turma]">
     </div>
   </div>
 
   <div class="form-group row">
     <label for="nota" class="col-sm-2 col-form-label">Nota</label>
     <div class="col-sm-10">
-      <input [(ngModel)]="nota" name="nota" type="text" class="form-control" id="nota" placeholder="Nota"
-             [value]="[aluno?.getNota]">
+      <input [(ngModel)]="aluno.nota" name="nota" type="text" class="form-control" id="nota" placeholder="Nota"
+             [value]="[aluno?.nota]">
     </div>
   </div>
 
