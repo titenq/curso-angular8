@@ -9,7 +9,7 @@ import { HeaderComponent } from './components/header/header.component'
 })
 export class AuthService {
 
-  userAuth: boolean = false
+  userAuth: boolean = true // TODO Trocar valor para false
   userAuthEmitter = new EventEmitter<boolean>()
   redirectUrl: string
 

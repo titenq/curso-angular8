@@ -16,10 +16,10 @@ const alunosRoutes: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AlunosGuard],
     children: [
-      {path: 'add', component: AlunoFormComponent},
       {path: ':id', component: AlunoComponent, resolve: {aluno: AlunoResolverService}},
       {path: ':id/edit', component: AlunoFormComponent, canDeactivate: [AlunosDeactivateGuard], resolve: {aluno: AlunoResolverService}},
-      {path: ':id/delete', component: AlunoDeleteComponent}
+      {path: ':id/delete', component: AlunoDeleteComponent},
+      {path: 'add', component: AlunoFormComponent}
     ]}
 ]
 

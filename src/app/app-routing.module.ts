@@ -25,6 +25,8 @@ import { AuthGuard } from './guards/auth.guard'
 const routes: Routes = [
   {path: 'alunos',
     loadChildren: () => import('./pages/alunos/alunos.module').then(mod => mod.AlunosModule), canLoad: [AuthGuard]},
+  {path: 'template-form',
+    loadChildren: () => import('./pages/psi/psi.module').then(mod => mod.PsiModule), canLoad: [AuthGuard]},
   {path: 'login',
     loadChildren: () => import('./pages/login/login.module').then(mod => mod.LoginModule)},
   {path: 'home', component: HomePageComponent},
