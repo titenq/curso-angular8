@@ -24,9 +24,14 @@ import { AuthGuard } from './guards/auth.guard'
 
 const routes: Routes = [
   {path: 'alunos',
-    loadChildren: () => import('./pages/alunos/alunos.module').then(mod => mod.AlunosModule), canLoad: [AuthGuard]},
+    loadChildren: () => import('./pages/alunos/alunos.module').then(mod => mod.AlunosModule),
+    canLoad: [AuthGuard]},
   {path: 'template-form',
-    loadChildren: () => import('./pages/psi/psi.module').then(mod => mod.PsiModule), canLoad: [AuthGuard]},
+    loadChildren: () => import('./pages/psi/psi.module').then(mod => mod.PsiModule),
+    canLoad: [AuthGuard]},
+  {path: 'pacientes',
+    loadChildren: () => import('./pages/pacientes/pacientes.module').then(mod => mod.PacientesModule),
+    canLoad: [AuthGuard]},
   {path: 'login',
     loadChildren: () => import('./pages/login/login.module').then(mod => mod.LoginModule)},
   {path: 'home', component: HomePageComponent},
@@ -43,10 +48,12 @@ const routes: Routes = [
   {path: 'diretiva-estrutural', component: DiretivaEstruturalPageComponent},
   {path: 'broadcast', component: BroadcastPageComponent},
   {path: 'pipes', component: PipesPageComponent},
-  {path: 'router', component: RouterPageComponent, canActivate: [AuthGuard]},
+  {path: 'router', component: RouterPageComponent,
+    canActivate: [AuthGuard]},
   {path: 'router/:id', component: RouterComIdComponent},
   {path: 'router/aluno/:id', component: RouterAlunoComponent},
-  {path: 'guard', component: GuardComponent, canActivate: [AuthGuard]},
+  {path: 'guard', component: GuardComponent,
+    canActivate: [AuthGuard]},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundPageComponent}
 ];

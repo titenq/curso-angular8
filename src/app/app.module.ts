@@ -45,7 +45,10 @@ import { RouterPageComponent } from './pages/router-page/router-page.component'
 import { PageNotFoundPageComponent } from './pages/page-not-found-page/page-not-found-page.component'
 import { RouterComIdComponent } from './components/router-com-id/router-com-id.component'
 import { RouterAlunoComponent } from './components/router-aluno/router-aluno.component';
-import { GuardComponent } from './pages/guard/guard.component'
+import { GuardComponent } from './pages/guard/guard.component';
+import { CepPipe } from './shared/cep.pipe'
+import { ConsultaCepService } from './shared/services/consulta-cep.service'
+import { HttpClientModule } from '@angular/common/http'
 
 registerLocaleData(localept, 'pt')
 
@@ -83,7 +86,8 @@ registerLocaleData(localept, 'pt')
     PageNotFoundPageComponent,
     RouterComIdComponent,
     RouterAlunoComponent,
-    GuardComponent
+    GuardComponent,
+    CepPipe
   ],
   imports: [
     BrowserModule,
@@ -94,9 +98,13 @@ registerLocaleData(localept, 'pt')
     MatButtonModule,
     MatMenuModule,
     MatCardModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    HttpClientModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'pt'}],
+  exports: [
+    CepPipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

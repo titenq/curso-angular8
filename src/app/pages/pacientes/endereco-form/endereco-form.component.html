@@ -1,0 +1,136 @@
+<div *ngFor="let v of visitas">
+  <div *ngIf="v.paciente.id == visita.id">
+    {{v.nome}}
+    {{v.rg}}
+  </div>
+</div>
+
+<form [formGroup]="formVisita" (ngSubmit)="onSubmitVisita()">
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="id">ID</label>
+      <input
+        formControlName="id"
+        type="text"
+        class="form-control"
+        id="id"
+        [value]="visita.id"
+        placeholder="Digite o ID">
+    </div>
+    <div class="form-group col-md-7">
+      <label for="nome">Nome</label>
+      <input
+        formControlName="nome"
+        type="text"
+        class="form-control"
+        id="nome"
+        [value]="visita.nome"
+        placeholder="Digite o Nome">
+      <div *ngIf="!formVisita.get('nome').valid && (formVisita.get('nome').touched || formVisita.get('nome').dirty)" class="alert alert-danger" role="alert">
+        O Campo Nome é Obrigatório!
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="rg">RG</label>
+      <input
+        formControlName="rg"
+        type="text"
+        class="form-control"
+        id="rg"
+        [value]="visita.rg"
+        placeholder="Digite a Identidade">
+    </div>
+  </div>
+
+  <div formGroupName="endereco">
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="idEndereco">ID</label>
+        <input
+          formControlName="id"
+          type="text"
+          class="form-control"
+          id="idEndereco"
+          [value]="visita?.endereco?.id"
+          placeholder="Digite o ID">
+      </div>
+      <div class="form-group col-md-3">
+        <label for="cep">CEP</label>
+        <input
+          formControlName="cep"
+          type="text"
+          class="form-control"
+          id="cep"
+          [value]="visita?.endereco?.cep"
+          (blur)="consultarCep()"
+          placeholder="Somente números">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="logradouro">Logradouro</label>
+        <input
+          formControlName="logradouro"
+          type="text"
+          class="form-control"
+          id="logradouro"
+          [value]="visita?.endereco?.logradouro"
+          placeholder="Rua, Av., Estrada, ...">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="numero">Número</label>
+        <input
+          formControlName="numero"
+          type="text"
+          class="form-control"
+          id="numero"
+          [value]="visita?.endereco?.numero"
+          placeholder="Número">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="complemento">Complemento</label>
+        <input
+          formControlName="complemento"
+          type="text"
+          class="form-control"
+          id="complemento"
+          [value]="visita?.endereco?.complemento"
+          placeholder="Casa, Apto, Lote, ...">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="bairro">Bairro</label>
+        <input formControlName="bairro"
+               type="text"
+               class="form-control"
+               id="bairro"
+               [value]="visita?.endereco?.bairro"
+               placeholder="Bairro">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="cidade">Cidade</label>
+        <input formControlName="cidade"
+               type="text"
+               class="form-control"
+               id="cidade"
+               [value]="visita?.endereco?.cidade"
+               placeholder="Cidade">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="estado">Estado</label>
+        <select formControlName="estado"
+                id="estado"
+                class="form-control">
+          <option value="" selected disabled>Escolha o Estado</option>
+          <option *ngFor="let estadoBr of estadosBr | async"
+                  [value]="(estadoBr.sigla == '') ? 'RJ' : estadoBr.sigla">
+            {{estadoBr.nome}}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Adicionar</button>
+</form>

@@ -1,0 +1,35 @@
+<h4>Endereços</h4>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Logradouro</th>
+    <th scope="col">Número</th>
+    <th scope="col">Complemento</th>
+    <th scope="col">Bairro</th>
+    <th scope="col">Cidade</th>
+    <th scope="col">Estado</th>
+    <th scope="col">CEP</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let endereco of enderecos">
+    <td>{{endereco?.logradouro}}</td>
+    <td>{{endereco?.numero}}</td>
+    <td>{{endereco?.complemento}}</td>
+    <td>{{endereco?.bairro}}</td>
+    <td>{{endereco?.cidade}}</td>
+    <td>{{endereco?.estado}}</td>
+    <td>{{endereco?.cep}}</td>
+    <td><i class="fas fa-edit mr-2"></i><a [routerLink]="'endereco/' + [endereco.id] + '/edit'" class="text-dark">Editar
+    </a></td>
+    <td><i class="fas fa-trash-alt mr-2"></i>
+<!--      <a class="text-dark cursor-pointer" (click)="onDelete(endereco.id)">Excluir</a>-->
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" routerLink="add">Adicionar</button>
+
+<router-outlet></router-outlet>

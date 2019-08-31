@@ -1,1 +1,38 @@
-<p>pacientes works!</p>
+<h4>Censo do dia {{data | date:'dd/MM/yyyy'}}</h4>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Paciente</th>
+    <th scope="col">Local</th>
+    <th scope="col">Visita</th>
+    <th scope="col">Troca</th>
+    <th scope="col">Editar</th>
+    <th scope="col">Excluir</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let paciente of pacientes">
+    <td>{{paciente?.nome}}</td>
+    <td>{{paciente?.local}}</td>
+    <td>
+      <i class="fas fa-address-card mr-2"></i>
+      <a [routerLink]="[paciente.id] + '/visita'" class="text-dark">Visita</a>
+    </td>
+    <td><i class="fas fa-user-clock mr-2"></i>Troca</td>
+    <td>
+      <i class="fas fa-edit mr-2"></i>
+      <a [routerLink]="[paciente.id] + '/edit'" class="text-dark">Editar</a>
+    </td>
+    <td><i class="fas fa-trash-alt mr-2"></i>
+      <a class="text-dark cursor-pointer" (click)="onDelete(paciente.id)">Excluir</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" routerLink="add">Adicionar</button>
+
+<!--<button type="button" class="btn btn-primary ml-2" routerLink="endereco">Endereço</button>-->
+
+<router-outlet></router-outlet>
